@@ -1,3 +1,5 @@
+package geometria.vectores;
+
 public class Vector3D extends Vector2D {
 	private double z;
 	public Vector3D (double x, double y, double z) {

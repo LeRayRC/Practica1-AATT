@@ -2,7 +2,7 @@ package geometria.vectores;
 
 public class Vector2D implements geometria.espacios.EspacioVectorial2D, OperacionesVector2D {
 
-	private double x,y; 
+	protected double x,y; 
 
 	//Constructores 
 
@@ -57,15 +57,22 @@ public class Vector2D implements geometria.espacios.EspacioVectorial2D, Operacio
 	}
 
 	public Vector2D rotar(double angulo){
-		x = x*Math.cos(angulo) + y*Math.sin(angulo); 
-		y = -x*Math.sin(angulo) + y*Math.cos(angulo);
+		double x1 = x*Math.cos(angulo) + y*Math.sin(angulo); 
+		double y1 = (-x*Math.sin(angulo)) + y*Math.cos(angulo);
+		setX(x1);
+		setY(y1);
 		return this;
 	}
 
 	public Vector2D restar(Vector2D v ){
 		this.x -= v.x;
-		this.x -= v.y;
+		this.y -= v.y;
 		return this; 
+	}
+
+	public String toString() {
+		return ("(" + x +","+ y + ")");
+
 	}
 
 } // Vector2D
