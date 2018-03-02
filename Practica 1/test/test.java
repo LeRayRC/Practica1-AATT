@@ -1,4 +1,6 @@
 package test;
+import geometria.vectores.Vector3D;
+import geometria.vectores.Vector2D;
 class Test {
 	public static void main ( String args[] ) {
 // 2D
