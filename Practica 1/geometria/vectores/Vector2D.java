@@ -11,6 +11,8 @@ public class Vector2D implements geometria.espacios.EspacioVectorial2D, Operacio
 		this.y = y;
 	}
 
+	//Contructor sobrecargado. 
+
 	public Vector2D(double x){
 		this(x,0);
 	}
@@ -71,8 +73,7 @@ public class Vector2D implements geometria.espacios.EspacioVectorial2D, Operacio
 	}
 
 	public String toString() {
-		return ("(" + x +","+ y + ")");
-
+		return ("(" + String.format("%.3e",x) +" "+ String.format("%.3e",y) + ")");
 	}
 
 } // Vector2D
