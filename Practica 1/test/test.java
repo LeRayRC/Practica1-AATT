@@ -1,15 +1,10 @@
 package test;
 import geometria.vectores.Vector3D;
 import geometria.vectores.Vector2D;
-/* He formateado ,dentro del System.out.println, el resultado del metodo norma
-	en vez de convertirlo a String dentro del propio metodo con el fin de que 
-	el resultado de norma se pueda utilizar para otras operaciones matematicas
-	con vectores. 
-*/
 
 public class Test {
 	public static void main ( String args[] ) {
-		//NumberFormat nf = NumberFormat.getInstance();
+		
 // 2D
 		Vector2D v = new Vector2D( -3, 4.5 );
 		System.out.println( "v = " + v );
