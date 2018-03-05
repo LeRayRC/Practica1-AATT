@@ -1,8 +1,12 @@
 package geometria.vectores;
+import java.util.Locale;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 public class Vector2D implements geometria.espacios.EspacioVectorial2D, OperacionesVector2D {
 
 	protected double x,y; 
+	protected NumberFormat df = new DecimalFormat("0.0E0");
 
 	//Constructores 
 
@@ -73,7 +77,7 @@ public class Vector2D implements geometria.espacios.EspacioVectorial2D, Operacio
 	}
 
 	public String toString() {
-		return ("(" + String.format("%.3e",x) +" "+ String.format("%.3e",y) + ")");
+		return ("(" + df.format(x) +" , "+ df.format(y) + ")");
 	}
 
 } // Vector2D
