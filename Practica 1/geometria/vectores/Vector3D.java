@@ -51,6 +51,6 @@ public class Vector3D extends Vector2D {
 		return this;
 	}
 	public String toString() {
-		return ("(" + super.nf.format(x) +" , "+ super.nf.format(y) + " , " + super.nf.format(z) + ")");
+		return ("(" + super.df.format("% .3e",x) +" , "+ super.df.format("% .3e",y) + " , " + super.df.format("% .3e",z) + ")");
 	}
 } // Vector3D
