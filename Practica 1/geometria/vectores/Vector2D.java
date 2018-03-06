@@ -1,12 +1,21 @@
 package geometria.vectores;
-import java.util.Locale;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 
 public class Vector2D implements geometria.espacios.EspacioVectorial2D, OperacionesVector2D {
 
 	protected double x,y; 
-	protected NumberFormat df = new DecimalFormat("0.000E0");
+	/*
+	Para formatear correctamente el numero utilizariamos la siguiente
+	intruccion a la hora de representar los elementos del vector
+	String.format("% .3e",#)
+	# Puede ser cualquier coordenada del vector 
+
+	La clase locale se puede utilizar para representar los numeros
+	en funcion de las convenciones que se establezcan en otros paises. 
+	p.e: si quisiesemos utilizar la notacion americana: 
+	protected NumberFormat nf = NumberFormat.getNumberInstance(Locale.US); 
+	posteriormente deberiamos formatear los numeros para aplicar este
+	convención.
+	*/
 
 	//Constructores 
 
@@ -77,7 +86,8 @@ public class Vector2D implements geometria.espacios.EspacioVectorial2D, Operacio
 	}
 
 	public String toString() {
-		return ("(" + df.format(x) +" , "+ df.format(y) + ")");
+		//return ("(" + df.format(x) +" , "+ df.format(y) + ")");
+		return ("(" + String.format("% .3e",x) + " , "+ String.format("% .3e",y) + ")");
 	}
 
 } // Vector2D
